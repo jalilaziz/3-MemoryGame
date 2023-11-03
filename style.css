@@ -2,9 +2,9 @@
     box-sizing: border-box;
 }
 :root {
-  --window-color1: #6C5F5B;
-  --window-color2: #B3A492;
-  --borderwindow-color: #4F4A45;
+  --window-color1: #98857f;
+  --window-color2: #dbc8b2;
+  --borderwindow-color: #726c65;
 }
 
 body {
@@ -36,10 +36,10 @@ body {
     left: 36.5%;
     width: 29.9%;
     height: 5%;
-    top: 5%;
-    transform: skew(-50deg);
+    top: 5.1%;
+    transform: skewX(-50deg);
     background: var(--window-color1);
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .rightside {
@@ -47,23 +47,50 @@ body {
     width: 2.6%;
     height: 80%;
     transform: skewY(-40deg);
-    background: var(--window-color2);
+    background: #736460;
     right: 32.3%;
-    top: 7.5%;
+    top: 7.6%;
     z-index: -1;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
+.middleface {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    z-index: 1;
+}
+
+.faceleft {
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    background-color: var(--window-color1);
+}
+.faceright {
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    background-color: var(--window-color1);
+    right: 0;
+}
+
+.etages {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .etage1, .etage2, .etage3, .etage4 {
     position: relative;
     width: 100%;
     height: 20%;
     display: flex;
-    border-bottom: 2px solid var(--borderwindow-color);
+    border-bottom: 2px solid var(--window-color1);
 }
 
 /*.window5, .window6, .window7, .window8 */
-.window{  
+.window {  
     position: relative;
     top: 0%;
     height: 50%;
@@ -72,7 +99,7 @@ body {
     margin: auto;
     margin-top: 5%;
 }
-
+ 
 .window::before {
     position: absolute;
     content: "";
@@ -94,7 +121,32 @@ body {
     border: 2px solid black;
     transform-origin: 100% 100%;
     transition: 1s;
+} 
+
+/* .winleft {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: var(--window-color1);
+    border: 2px solid black;
+    transform-origin: 0% 0%;
+    transition: 1s;
+    top: 0;
 }
+
+.winright {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--window-color2);
+    border: 2px solid black;
+    transform-origin: 100% 100%;
+    transition: 1s;
+    top: 0;
+} */
 
 .window.active::before {
     transform: rotateY(120deg);
@@ -102,17 +154,16 @@ body {
 
 .window.active::after {
     transform: rotateY(120deg);
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 .window.active {
-    width: 65%;
+    width: 100%;
     height: 100%;
     position: fixed;
     z-index: 5;
-    
-    transform: translate(-28%, -11.5%);
-}
+    transform: translate(-35.3%, -11.5%);
+} 
 
 .rdc {
     position: absolute;
@@ -120,6 +171,7 @@ body {
     border: 2px solid black;
     height: 20%;
     background-color: var(--borderwindow-color);
+    bottom: 0;
 }
 
 .porte {
