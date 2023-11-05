@@ -146,7 +146,7 @@ body {
     position: fixed;
     z-index: 5;
     transform: translate(-32.8%, -11.17%);
-    transition: 1s;
+    transition: 0.5s;
 } 
 
 .window.open::before {
