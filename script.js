@@ -1,18 +1,18 @@
-let windo = document.querySelectorAll(".window");
-windo.forEach((element) => {
-  element.addEventListener("click", (e) => {
-    e.target.classList.toggle("active");
-  });
-});
-
-
-// //decoration
-// var rn = Math.floor((Math.random() * 150) + 60);
-// var rs = Math.floor((Math.random() * 11) + 4);
-//   var t = new Trianglify({
-//  x_gradient: Trianglify.colorbrewer.Spectral[rs],
-//     noiseIntensity: 0,
-//     cellsize: rn
+// let windo = document.querySelectorAll(".window");
+// windo.forEach((element) => {
+//   element.addEventListener("click", (e) => {
+//     e.target.classList.toggle("active");
+//   });
 // });
-// var pattern = t.generate(window.innerWidth, window.innerWidth+200);
-// document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+
+// ***************************
+
+// const winBefore = document.querySelector('.window::before, .window::after');
+const wins = document.querySelectorAll('.window');
+  wins.forEach(win=>{
+    win.addEventListener('click', () => {
+      win.classList.toggle('active');
+      // win.classList.add('open');
+    })
+  });
+
